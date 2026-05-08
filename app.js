@@ -1,56 +1,81 @@
+
 // 4.1 Número mayor
-    function mayor() {
-      let n1 = parseInt(document.getElementById("num1").value);
-      let n2 = parseInt(document.getElementById("num2").value);
 
-      if (n1 > n2) {
-        res1.innerText = "El mayor es: " + n1;
-      } else if (n2 > n1) {
-        res1.innerText = "El mayor es: " + n2;
-      } else {
-        res1.innerText = "Los dos números son iguales";
-      }
-    }
+function mayor() {
 
-    // 4.2 Nivel de experiencia
-    function nivel() {
-      let nombre = document.getElementById("nombre").value;
-      let años = parseInt(document.getElementById("años").value);
-      let nivel = "";
+  const n1 = parseInt(document.getElementById("num1").value);
+  const n2 = parseInt(document.getElementById("num2").value);
 
-      if (años < 2) nivel = "Principiante";
-      else if (años <= 4) nivel = "Intermedio";
-      else if (años <= 7) nivel = "Avanzado";
-      else if (años <= 10) nivel = "Experto";
-      else nivel = "Gurú";
+  const res = document.getElementById("res1");
 
-      res2.innerText = nombre + " tiene nivel: " + nivel;
-    }
+  if (n1 > n2) {
+    res.innerText = "El mayor es: " + n1;
+  } else if (n2 > n1) {
+    res.innerText = "El mayor es: " + n2;
+  } else {
+    res.innerText = "Los dos números son iguales";
+  }
+}
 
-    // 4.3 Palabra bonita
-    function bonita() {
-      let palabra = document.getElementById("palabra").value;
 
-      let esBonita = (
-        (palabra.length === 9 && palabra.startsWith("h")) ||
-        (palabra.length === 5 && palabra.startsWith("p"))
-      );
 
-      if (esBonita) {
-        res3.innerText = "La palabra es bonita según los estudios lingüísticos.";
-      } else {
-        res3.innerText = "La palabra no es considerada bonita.";
-      }
-    }
+// 4.2 Nivel experiencia
 
-    // 4.4 Número a letras
-    function convertir() {
-      let num = parseInt(document.getElementById("numero").value);
-      let letras = [ "cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","diez" ];
+function nivel() {
 
-      if (num >= 0 && num <= 10) {
-        res4.innerText = "El número " + num + " es: " + letras[num];
-      } else {
-        res4.innerText = "Número inválido. Introduce un valor entre 0 y 10.";
-      }
-    }
+  const nombre = document.getElementById("nombre").value;
+  const años = parseInt(document.getElementById("años").value);
+
+  let nivel = "";
+
+  if (años < 2) nivel = "Principiante";
+  else if (años <= 4) nivel = "Intermedio";
+  else if (años <= 7) nivel = "Avanzado";
+  else if (años <= 10) nivel = "Experto";
+  else nivel = "Gurú";
+
+  document.getElementById("res2").innerText =
+    nombre + " tiene nivel: " + nivel;
+}
+
+
+// 4.3 Palabra bonita
+
+function bonita() {
+
+  const palabra = document.getElementById("palabra").value;
+
+  const esBonita =
+    (palabra.length === 9 && palabra.startsWith("h")) ||
+    (palabra.length === 5 && palabra.startsWith("p"));
+
+  const res = document.getElementById("res3");
+
+  if (esBonita) {
+    res.innerText = "La palabra es bonita según los estudios lingüísticos.";
+  } else {
+    res.innerText = "La palabra no es considerada bonita.";
+  }
+}
+
+
+
+// 4.4 Número a letras
+
+function convertir() {
+
+  const num = parseInt(document.getElementById("numero").value);
+
+  const letras = [
+    "cero","uno","dos","tres","cuatro",
+    "cinco","seis","siete","ocho","nueve","diez"
+  ];
+
+  const res = document.getElementById("res4");
+
+  if (num >= 0 && num <= 10) {
+    res.innerText = `El número ${num} es: ${letras[num]}`;
+  } else {
+    res.innerText = "Número inválido (0-10)";
+  }
+}

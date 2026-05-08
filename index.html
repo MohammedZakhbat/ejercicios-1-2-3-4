@@ -2,56 +2,92 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./output.css">
-    <title>Ejercicios JS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <title>Ejercicios JS</title>
 </head>
 
-<body class="bg-gradient-to-br from-blue-100 to-purple-200 min-h-screen p-6">
+<body class="min-h-screen bg-gradient-to-br from-slate-100 via-blue-100 to-purple-200">
 
-    <h1 class="text-3xl font-bold text-center mb-8">Ejercicios JavaScript</h1>
+  
+  <header class="text-center py-12">
 
-    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+    <h1 class="text-5xl font-black text-slate-800">
+      🚀 Ejercicios JavaScript
+    </h1>
 
-        <!-- Ejercicio 4.1 -->
-        <div class="bg-white p-6 rounded-2xl shadow">
-            <h2 class="text-xl font-semibold mb-4">4.1 Número mayor</h2>
-            <input id="num1" type="number" placeholder="Número 1" class="border p-2 w-full mb-2 rounded">
-            <input id="num2" type="number" placeholder="Número 2" class="border p-2 w-full mb-2 rounded">
-            <button onclick="mayor()" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Comparar</button>
-            <p id="res1" class="mt-3 font-medium"></p>
-        </div>
+    <p class="text-slate-600 mt-3 text-lg">
+      Selecciona un ejercicio para comenzar
+    </p>
 
-        <!-- Ejercicio 4.2 -->
-        <div class="bg-white p-6 rounded-2xl shadow">
-            <h2 class="text-xl font-semibold mb-4">4.2 Nivel de experiencia</h2>
-            <input id="nombre" type="text" placeholder="Nombre" class="border p-2 w-full mb-2 rounded">
-            <input id="años" type="number" placeholder="Años de experiencia" class="border p-2 w-full mb-2 rounded">
-            <button onclick="nivel()" class="bg-green-500 text-white px-4 py-2 rounded w-full">Ver nivel</button>
-            <p id="res2" class="mt-3 font-medium"></p>
-        </div>
+  </header>
 
-        <!-- Ejercicio 4.3 -->
-        <div class="bg-white p-6 rounded-2xl shadow">
-            <h2 class="text-xl font-semibold mb-4">4.3 Palabra bonita</h2>
-            <input id="palabra" type="text" placeholder="Introduce una palabra" class="border p-2 w-full mb-2 rounded">
-            <button onclick="bonita()" class="bg-purple-500 text-white px-4 py-2 rounded w-full">Analizar</button>
-            <p id="res3" class="mt-3 font-medium"></p>
-        </div>
+  <main class="max-w-6xl mx-auto px-6 pb-20">
 
-        <!-- Ejercicio 4.4 -->
-        <div class="bg-white p-6 rounded-2xl shadow">
-            <h2 class="text-xl font-semibold mb-4">4.4 Número a letras</h2>
-            <input id="numero" type="number" placeholder="Número (0-10)" class="border p-2 w-full mb-2 rounded">
-            <button onclick="convertir()" class="bg-red-500 text-white px-4 py-2 rounded w-full">Convertir</button>
-            <p id="res4" class="mt-3 font-medium"></p>
-        </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+      <a href="ejercicio1.html"
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition">
+
+        <h2 class="text-2xl font-bold text-blue-600 mb-2">
+          4.1 Número mayor
+        </h2>
+
+        <p class="text-slate-500">
+          Comparar dos números y ver cuál es mayor.
+        </p>
+
+      </a>
+
+      <a href="ejercicio2.html"
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition">
+
+        <h2 class="text-2xl font-bold text-green-600 mb-2">
+          4.2 Nivel de experiencia
+        </h2>
+
+        <p class="text-slate-500">
+          Calcula el nivel según los años de experiencia.
+        </p>
+
+      </a>
+
+     
+      <a href="ejercicio3.html"
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition">
+
+        <h2 class="text-2xl font-bold text-purple-600 mb-2">
+          4.3 Palabra bonita
+        </h2>
+
+        <p class="text-slate-500">
+          Analiza si una palabra es "bonita".
+        </p>
+
+      </a>
+
+      
+      <a href="ejercicio4.html"
+        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition">
+
+        <h2 class="text-2xl font-bold text-red-600 mb-2">
+          4.4 Número a letras
+        </h2>
+
+        <p class="text-slate-500">
+          Convierte un número en texto (0-10).
+        </p>
+
+      </a>
 
     </div>
 
-    <script src="app.js">
+  </main>
 
-    </script>
+  <footer class="text-center py-10 text-slate-500">
+    Hecho con HTML, Tailwind CSS y JS💻
+  </footer>
 
 </body>
 
